@@ -7,8 +7,8 @@ Threads Envolvidas:
 Sincronização entre as Threads:
 - Mutex : Utilizado para garantir a exclusão mútua ao acessar recursos compartilhados, como o número de ingressos disponíveis e a fila de compradores.
 - Variáveis de Condição (cond_not_full e cond_not_empty): Usadas para sincronizar compradores e geradores:
-  A.cond_not_full: Sinaliza quando há espaço disponível na fila de compradores.
-  B.cond_not_empty: Sinaliza quando há ingressos disponíveis para compra.
+- cond_not_full: Sinaliza quando há espaço disponível na fila de compradores.
+- cond_not_empty: Sinaliza quando há ingressos disponíveis para compra.
 
 Mecanismo de Feedback de Reserva:
 - Quando um comprador tenta comprar ingressos e não há ingressos suficientes disponíveis, ele aguarda na fila até que mais ingressos estejam disponíveis (pthread_cond_wait(&cond_not_empty, &mutex)).
