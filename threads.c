@@ -54,7 +54,7 @@ void *gerar_ingressos(void *arg) {
            ingressos_adicionados, ingressos_disponiveis);
     pthread_mutex_unlock(&mutex);
     pthread_cond_signal(&cond_not_empty);
-    sleep(rand() % 5);
+    sleep(rand() % 3);
   }
 }
 
